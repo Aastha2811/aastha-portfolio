@@ -67,3 +67,34 @@ tr.pick td{background:#fff3ea}
 .mk-sun{--acc:#ee9a62}
 .mk-peach{--acc:#ec9064}
 .mk-sky{--acc:#e98e5e}
+
+/* ---------- fresher header and buttons ---------- */
+:root{
+  --grad-fresh:linear-gradient(120deg,#ffd4b8 0%,#ffb894 38%,#f6b3c4 68%,#cdb6f2 100%);
+  --glow-peach:0 12px 26px -14px rgba(255,146,104,.75),0 4px 10px -6px rgba(184,162,227,.6);
+}
+
+/* header: airy glass with a pastel hairline */
+.topbar{background:rgba(255,252,249,.78);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px)}
+.topbar::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,rgba(255,190,152,0),#ffbe98 20%,#f6b3c4 50%,#b8a2e3 80%,rgba(184,162,227,0));opacity:.85}
+.topbar.scrolled{box-shadow:0 14px 30px -24px rgba(75,54,87,.45)}
+.logo svg{--orange:#ff9f7d;filter:drop-shadow(0 2px 4px rgba(255,159,125,.45))}
+.secnav a{color:var(--plum);font-weight:500}
+.secnav a:hover{background:#f3ecfc}
+.secnav a.active,.secnav a.active:hover{background:linear-gradient(120deg,#ffe2d1,#ece2fb);color:var(--plum);border-color:transparent;box-shadow:inset 0 0 0 1px rgba(184,162,227,.45)}
+
+/* primary buttons: peach-to-lavender gradient with a soft glow */
+.btn{background:var(--grad-fresh);background-size:160% 100%;background-position:0% 50%;color:var(--plum);box-shadow:var(--glow-peach),inset 0 1px 0 rgba(255,255,255,.55);transition:transform .2s ease,background-position .45s ease,box-shadow .2s ease}
+.btn:hover{background:var(--grad-fresh);background-size:160% 100%;background-position:100% 50%;box-shadow:0 16px 30px -14px rgba(255,146,104,.8),0 6px 14px -6px rgba(184,162,227,.7),inset 0 1px 0 rgba(255,255,255,.55)}
+
+/* secondary buttons: light lavender outline instead of heavy plum */
+.btn-ghost{background:rgba(255,255,255,.7);border:1.5px solid #cdb9f0;box-shadow:none;color:var(--plum)}
+.btn-ghost:hover{background:#f3ecfc;border-color:#b8a2e3;color:var(--plum);box-shadow:0 10px 22px -16px rgba(124,93,184,.7)}
+.chip,.copy-btn{border:1.5px solid #cdb9f0}
+.chip:hover,.copy-btn:hover{background:#f3ecfc;color:var(--plum)}
+.chip[aria-pressed="true"]{background:var(--grad-fresh);border-color:transparent;color:var(--plum)}
+
+/* floating fit-check button: aubergine with a pastel ring */
+.fab{background:linear-gradient(135deg,#5a4168,#43304f);box-shadow:0 16px 32px -14px rgba(75,54,87,.6),0 0 0 3px #fffcf9,0 0 0 5px rgba(205,182,242,.7)}
+.fab small{color:#ffcaa9}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
