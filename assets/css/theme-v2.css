@@ -1,0 +1,69 @@
+/* Aastha Gupta portfolio · v2 "Soft Peach" theme
+   Palette built on industry colour-of-the-year references:
+   Peach Fuzz (Pantone 13-1023, 2024) replaces the bright orange,
+   Digital Lavender (WGSN, 2023) softens the orchid,
+   and a muted aubergine keeps the plum brand anchor.
+   Loaded after style.css; it only changes colours. */
+
+:root{
+  --cream:#fbf5ef;
+  --cream-2:#f3e7de;
+  --white:#fffcf9;
+  --plum:#4b3657;
+  --plum-deep:#3d2b48;
+  --orange:#ffbe98;          /* Peach Fuzz: bands, buttons, icon circles */
+  --orange-hover:#ffaf85;
+  --orchid:#b8a2e3;          /* Digital Lavender: fills and accents on dark */
+  --ink:#3a2c45;
+  --muted:#786a83;
+  --lilac:#e4daf3;
+  --on-accent:#4b3657;       /* text on peach is aubergine, not white */
+  --accent-deep:#b4603c;
+  --track:#e5dbec;
+  /* text-safe versions of the accents for light backgrounds (WCAG AA) */
+  --accent-ink:#b65a34;
+  --orchid-ink:#7c5db8;
+  --peach-mid:#f2a47c;
+}
+
+/* peach bands: dark text instead of white */
+.about{color:var(--ink)}
+.about h2{color:var(--plum)}
+.about h2 b{color:var(--plum)}
+.about .copy strong{color:var(--plum)}
+.stats,.stat+.stat,.stat:nth-child(n+3),.stat:nth-child(even){border-color:rgba(75,54,87,.18)!important}
+.stat .n{color:var(--plum)}
+.how .h2,.how .h2 b,.how-head p{color:var(--plum)}
+.sticker{box-shadow:0 8px 0 rgba(75,54,87,.12)}
+
+/* accent text on light backgrounds */
+.hero h1 .own{color:var(--orchid-ink)}
+.tagline span+span::before{color:var(--orchid-ink)}
+.tag,.ship .co,.hw-top,.role .when,.tools h3,.tk-g h3,.res-top .for,
+.contact h2,.facts dt,.prose h3,.next a.nx small,.b-in small{color:var(--orchid-ink)}
+.ccard:hover .more,.ship .m,.hw-ex small,.hw-ex a:hover,.verdict span,.facts-row span.warn::before,
+.mlist p a,.line a:hover,.callout .k,td.win,.steps i,.next a.nx:hover span{color:var(--accent-ink)}
+.ladder div::before,.glist li::before{border-color:var(--orchid)}
+
+/* small marks on light backgrounds */
+ul.spark li::before,.result span::before,.tk-key i,.sk i{background:var(--peach-mid)}
+.how ul.spark li::before,.journey ul.spark li::before{background:var(--peach-mid)}
+.sk[aria-pressed="true"] i{background:var(--orange)}
+.lbar.hi .fill{background:var(--peach-mid)}
+
+/* soft tints */
+tr.pick td{background:#fff3ea}
+.t-bad{background:#ffe7d8;color:#8a4426}
+.t-good,.mlist .t i,.sig.m{background:#efe8f8}
+.drawer textarea:focus{border-color:var(--orchid-ink)}
+:focus-visible{outline-color:var(--orchid-ink)}
+
+/* plum surfaces: gentler body text */
+.journey .intro p,.case-hero .sum{color:#efe7f5}
+.stage .found,.stage .what,.tk-panel li{color:#f3edf8}
+.award p{color:#ebe3f3}
+
+/* app mockups: softer coral instead of deep orange */
+.mk-sun{--acc:#ee9a62}
+.mk-peach{--acc:#ec9064}
+.mk-sky{--acc:#e98e5e}
