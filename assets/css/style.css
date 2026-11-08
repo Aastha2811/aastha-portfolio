@@ -1,4 +1,4 @@
-/* Aastha Gupta portfolio · shared styles (theme tokens live in :root; /v2/ overrides them in theme-v2.css) */
+/* Aastha Gupta portfolio · shared styles (theme tokens live in :root) */
 :root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 body{margin:0;font:14px/1.5 system-ui,sans-serif}
 img{max-width:100%}
